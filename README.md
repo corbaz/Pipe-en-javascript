@@ -178,3 +178,5 @@ const myArr = [
 { myOtherArray: ['🦄🦄🦄🦄'], myMethod: () => console.log('hola como estamos') },
 ]
 Este método tiene una función en la estructura, pues escojas el método que escojas, esa función no la podrás clonar
+
+Interesante https://www.youtube.com/watch?v=luJ6GpZh4BM&ab_channel=hdeleon.net
