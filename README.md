@@ -1,4 +1,5 @@
-Cómo copiar un array en JavaScript
+# Cómo copiar un array en JavaScript
+
 Diciembre del 2021
 Al igual que vimos con objects en cómo copiar un object, clonar arrays no es trivial ya que en JavaScript todo se copia por referencia
 
@@ -88,7 +89,7 @@ const myDeepCopy = clone(myArr)
 
 // copia deep con los dos métodos de lodash, uno para shallow y otro para deep
 const myShallowLodashClone = _.clone(myArr)
-const myDeepLodashClone = _.cloneDeep(myArr)
+const myDeepLodashClone =_.cloneDeep(myArr)
 
 // cambio el array original
 myArr[0] = '🔥🔥🔥🔥' // 1 dimensión
@@ -179,4 +180,5 @@ const myArr = [
 ]
 Este método tiene una función en la estructura, pues escojas el método que escojas, esa función no la podrás clonar
 
-Interesante https://www.youtube.com/watch?v=luJ6GpZh4BM&ab_channel=hdeleon.net
+Interesante
+[https://www.youtube.com/watch?v=luJ6GpZh4BM&ab_channel=hdeleon.net]
