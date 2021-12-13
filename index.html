@@ -10,7 +10,7 @@
 
 <body>
     <script type="module">
-        import _ from 'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js';
+
 
         const personas = [
             {
@@ -30,15 +30,12 @@
                 edad: 17
             }
         ];
-        console.log("Listado Original de Cervezas: ", personas);
-
 
         const Mayusculas = (lista, campo) => {
 
             //const arrayMayusculas = new Array(...lista);
             //Inmutable gracias a la la funcion JSON.parse() que genera una copia del array
             const arrayMayusculas = JSON.parse(JSON.stringify(lista))
-            console.log("Listado Original de Cervezas: ", arrayMayusculas);
 
             console.log(`Lista de ${campo} en Mayusculas:`);
 
@@ -77,13 +74,7 @@
             const arrayNueva = new Array(...lista)
             //console.log("listaNueva. ", arrayNueva);
 
-            if (orden === "asc") {
-                order = 'de Menor a Mayor'
-            } else {
-                order = 'de Mayor a Menor'
-            }
-
-            console.log(`Lista ordenada ${order} por ${campo} :`)
+            console.log(`Lista ordenada ${orden === "asc" ? 'de Menor a Mayor' : 'de Mayor a Menor'} por ${campo} :`)
 
             const ordenacion = (typeof arrayNueva[0][campo]);
 
@@ -128,6 +119,12 @@
         const Lista_Personas_de_Z_a_A_x_Nombre = Ordenar(personas, "desc", "nombre");
         console.log(Lista_Personas_de_Z_a_A_x_Nombre);
 
+
+        const Menores_Mayores_Alfabetico = Mayusculas(Ordenar(Ordenar(personas, 'desc', 'nombre'), 'asc', 'edad'), `nombre`);
+
+        console.log("Listado de Personas de Menor a Mayor edad en Mayuscula: ", Menores_Mayores_Alfabetico);
+
+        console.log("Listado Original de Peronas: ", personas);
     </script>
 
 </body>
